@@ -4,14 +4,14 @@ pipeline{
         stage("Build"){
             steps{
                 bat "mvn -version"
-               bat "mvn clean"
+               bat "mvn clean install"
             }
 
         }
         stage('SonarQube analysis') {
         steps{
         withSonarQubeEnv('Sonarqube 6.7.7') { 
-        bat "mvn sonar:sonar"
+        bat "mvn clean deploy sonar:sonar"
     			}
         	}
         }

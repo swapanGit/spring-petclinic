@@ -3,8 +3,7 @@ pipeline{
     stages{
         stage("Build"){
             steps{
-                bat "mvn -version"
-               bat "mvn clean package install"
+               bat "mvn clean install"
             }
 
         }
@@ -15,13 +14,13 @@ pipeline{
     			}
         	}
         }
-        stage("docker push"){
+                stage("liquibase db analysis"){
             steps{
-                bat "mvn clean package dockerfile:push"
                 bat "mvn liquibase:update"
             }
 
         }
+
 
     }
 

@@ -15,6 +15,12 @@ pipeline{
     			}
         	}
         }
+        stage("docker push"){
+            steps{
+                bat "mvn clean package dockerfile:push"
+            }
+
+        }
 
     }
 

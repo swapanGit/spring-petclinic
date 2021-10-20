@@ -293,6 +293,18 @@
 					<useMavenSettingsForAuth>true</useMavenSettingsForAuth>
 				</configuration>
 			</plugin>
+			<!-- Adding liquibase plugin -->
+			<plugin>
+				<groupId>org.liquibase</groupId>
+				<artifactId>liquibase-maven-plugin</artifactId>
+				<version>3.4.2</version>
+				<configuration>
+					<propertyFile>src/main/resources/liquibase/liquibase.properties</propertyFile>
+					<changeLogFile>src/main/resources/liquibase/changelog_1.0.xml</changeLogFile>
+					<outputChangeLogFile>src/main/resources/liquibase/ouput/generatedchangelog.xml</outputChangeLogFile>
+				</configuration>
+
+			</plugin>
 		</plugins>
 	</build>
 

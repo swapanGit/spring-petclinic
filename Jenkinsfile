@@ -24,15 +24,16 @@ pipeline{
             }
 
         }
-        post {
+       
+
+    }
+     post {
         always {
             cleanWs(cleanWhenNotBuilt: false,
                     deleteDirs: true,
                     disableDeferredWipeout: true,
                     notFailBuild: true)
         }
-    }
-
     }
 
 }

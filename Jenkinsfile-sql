@@ -1,29 +1,21 @@
 pipeline{
     agent any
     stages{
-        stage("Build"){
-            steps{
-               bat "mvn clean install"
-            }
-
-        }
-        stage('SonarQube analysis') {
-        	steps{
-        		bat "mvn sonar:sonar"
-        	}
-        }
-        stage("liquibase db analysis"){
+        
+                stage("liquibase db update"){
             steps{
                 bat "mvn liquibase:update"
             }
 
         }
-        stage("docker push"){
+        
+                stage("liquibase db output change"){
             steps{
-                bat "mvn package dockerfile:push"
+                bat "mvn liquibase:generateChangeLog"
             }
 
         }
+       
         post {
         always {
             cleanWs(cleanWhenNotBuilt: false,

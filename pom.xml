@@ -121,10 +121,10 @@
 		</dependency>
 
 		<!-- Adding Liquibase dependency -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.liquibase</groupId>
 			<artifactId>liquibase-core</artifactId>
-		</dependency>
+		</dependency> -->
 	</dependencies>
 
 	<build>
@@ -142,7 +142,7 @@
 					</execution>
 				</executions>
 			</plugin>
-<!-- 			<plugin>
+  			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-checkstyle-plugin</artifactId>
 				<version>3.1.1</version>
@@ -168,14 +168,14 @@
 							<encoding>UTF-8</encoding>
 							<sourceDirectories>${basedir}</sourceDirectories>
 							<includes>**/*</includes>
-							<excludes>**/.git/**/*,**/.idea/**/*,**/target/**/,**/.flattened-pom.xml,**/*.class</excludes>
+							<excludes>**/liquibase/db/**/*,**/.git/**/*,**/.idea/**/*,**/target/**/,**/.flattened-pom.xml,**/*.class</excludes>
 						</configuration>
 						<goals>
 							<goal>check</goal>
 						</goals>
 					</execution>
 				</executions>
-			</plugin> -->
+			</plugin> 
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>

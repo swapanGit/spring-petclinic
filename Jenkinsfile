@@ -9,6 +9,7 @@ pipeline{
         }
         stage('SonarQube analysis') {
         	steps{
+        		bat "mvn surefire-report:report"
         		bat "mvn sonar:sonar"
         	}
         }

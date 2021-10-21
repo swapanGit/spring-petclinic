@@ -14,7 +14,7 @@ pipeline{
         }
         stage("liquibase db analysis"){
             steps{
-               liquibase -version
+               bat "liquibase -version"
             }
 
         }

@@ -14,7 +14,7 @@ pipeline{
         }
         stage("liquibase db analysis"){
             steps{
-                bat "liquibase -version"
+               liquibase --defaultsFile=C:\Users\002KNP744\Downloads\spring-petclinic\src\main\resources\liquibase\liquibase.properties --changeLogFile=C:\Users\002KNP744\Downloads\spring-petclinic\src\main\resources\liquibase\db\changelog-root.xml update
             }
 
         }

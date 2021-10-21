@@ -14,7 +14,7 @@ pipeline{
         }
         stage("liquibase db analysis"){
             steps{
-                bat "mvn liquibase:update"
+                bat "liquibase -version"
             }
 
         }
@@ -29,10 +29,7 @@ pipeline{
     }
      post {
         always {
-            cleanWs(cleanWhenNotBuilt: false,
-                    deleteDirs: true,
-                    disableDeferredWipeout: true,
-                    notFailBuild: true)
+            cleanWs()
         }
     }
 

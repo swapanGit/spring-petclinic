@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: spring-petclinic-app
-          image: explaincs/spring-petclinic:1.0.1
+          image: explaincs/spring-petclinic:2.5.0-SNAPSHOT
           imagePullPolicy: Always
           ports:
             - containerPort: 8088

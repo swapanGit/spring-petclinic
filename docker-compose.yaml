@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  dev:
+    build: # "context" and "dockerfile" fields have to be under "build"
+      context: .
+      dockerfile: Dockerfile
+  test:
+    build: # "context" and "dockerfile" fields have to be under "build"
+      context: .
+      dockerfile: DockerfileTest
+  prod:
+    build: # "context" and "dockerfile" fields have to be under "build"
+      context: .
+      dockerfile: DockerfileProd

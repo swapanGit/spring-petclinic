@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-petclinic-app
+  labels:
+    app: spring-petclinic-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spring-petclinic-app
+  template:
+    metadata:
+      labels:
+        app: spring-petclinic-app
+    spec:
+      containers:
+        - name: spring-petclinic-app
+          image: explaincs/spring-petclinic:2.5.0-SNAPSHOT
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8089
+#         env:
+#         - name: SPRING_PROFILES_ACTIVE
+#           value: "test"
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: spring-petclinic-svc
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 80
+      targetPort: 8089
+      protocol: TCP
+  selector:
+    app: spring-petclinic-app

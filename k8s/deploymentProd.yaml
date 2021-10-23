@@ -19,7 +19,10 @@ spec:
           image: explaincs/spring-petclinic:2.5.0-SNAPSHOT
           imagePullPolicy: Always
           ports:
-            - containerPort: 8088
+            - containerPort: 8087
+#         env:
+#         - name: SPRING_PROFILES_ACTIVE
+#           value: "test"
 
 ---
 apiVersion: v1
@@ -30,7 +33,7 @@ spec:
   type: LoadBalancer
   ports:
     - port: 80
-      targetPort: 8088
+      targetPort: 8087
       protocol: TCP
   selector:
     app: spring-petclinic-app

@@ -21,13 +21,13 @@ pipeline{
         }
         stage("Create Docker image and push to repo"){
             steps{
-                bat "mvn package dockerfile:push"
+                bat "docker-compose build"
             }
 
         }
 		stage("Deploy to k8s"){
             steps{
-                bat "kubectl apply -f deployment.yaml"
+                bat "kubectl apply -f k8s/"
             }
 
         }

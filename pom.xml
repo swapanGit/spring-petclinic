@@ -281,7 +281,7 @@
 				<version>3.7.0.1746</version>
 			</plugin>
 			<!-- Adding spotify-docker plugin -->
-			<plugin>
+	<!-- <plugin>
 				<groupId>com.spotify</groupId>
 				<artifactId>dockerfile-maven-plugin</artifactId>
 				<version>1.4.13</version>
@@ -299,9 +299,9 @@
 					<tag>${project.version}</tag>
 					<useMavenSettingsForAuth>true</useMavenSettingsForAuth>
 				</configuration>
-			</plugin>
+			</plugin> -->
 			<!-- Adding liquibase plugin -->
-			<plugin>
+	<!-- <plugin>
 				<groupId>org.liquibase</groupId>
 				<artifactId>liquibase-maven-plugin</artifactId>
 				<configuration>
@@ -309,7 +309,7 @@
 				</configuration>
 
 			</plugin>
-		</plugins>
+		</plugins> -->
 	</build>
 
 	<licenses>

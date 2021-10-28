@@ -301,14 +301,13 @@
 				</configuration>
 			</plugin>  -->
 			<!-- Adding liquibase plugin -->
-	<!-- <plugin>
+<!--  <plugin>
 				<groupId>org.liquibase</groupId>
 				<artifactId>liquibase-maven-plugin</artifactId>
 				<configuration>
 				<propertyFile>src/main/resources/liquibase/liquibase.properties</propertyFile>
 				</configuration>
-
-			</plugin> -->
+			</plugin>  -->
 		</plugins> 
 	</build>
 

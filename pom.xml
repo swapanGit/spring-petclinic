@@ -122,10 +122,8 @@
 		</dependency>
 
 		<!-- Adding Liquibase dependency -->
- <!-- <dependency>
-			<groupId>org.liquibase</groupId>
-			<artifactId>liquibase-core</artifactId>
-		</dependency> -->
+		<!-- <dependency> <groupId>org.liquibase</groupId> <artifactId>liquibase-core</artifactId> 
+			</dependency> -->
 	</dependencies>
 
 	<build>
@@ -143,7 +141,7 @@
 					</execution>
 				</executions>
 			</plugin>
-  			<plugin>
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-checkstyle-plugin</artifactId>
 				<version>3.1.1</version>
@@ -176,7 +174,7 @@
 						</goals>
 					</execution>
 				</executions>
-			</plugin> 
+			</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
@@ -280,8 +278,7 @@
 				<artifactId>sonar-maven-plugin</artifactId>
 				<version>3.7.0.1746</version>
 			</plugin>
-
-		</plugins> 
+		</plugins>
 	</build>
 
 	<licenses>

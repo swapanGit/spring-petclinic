@@ -122,7 +122,7 @@
 		</dependency>
 
 		<!-- Adding Liquibase dependency -->
-		<!-- <dependency>
+ <!-- <dependency>
 			<groupId>org.liquibase</groupId>
 			<artifactId>liquibase-core</artifactId>
 		</dependency> -->
@@ -299,7 +299,7 @@
 					<tag>${project.version}</tag>
 					<useMavenSettingsForAuth>true</useMavenSettingsForAuth>
 				</configuration>
-			</plugin> -->
+			</plugin>  -->
 			<!-- Adding liquibase plugin -->
 	<!-- <plugin>
 				<groupId>org.liquibase</groupId>
@@ -308,8 +308,8 @@
 				<propertyFile>src/main/resources/liquibase/liquibase.properties</propertyFile>
 				</configuration>
 
-			</plugin>
-		</plugins> -->
+			</plugin> -->
+		</plugins> 
 	</build>
 
 	<licenses>
